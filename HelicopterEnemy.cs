@@ -132,6 +132,22 @@ public class HelicopterEnemy : MonoBehaviour
 	{
 		StartCoroutine(Falling());
 	}
+	
+	// If the helicopter hits the ground while falling before distance threshold : explode
+	private void OnCollisionEnter(Collision collision)
+	{
+	  if(falling)
+	  {
+	    if(collision.gameObject.CompareTag("Terrain"))
+	    {
+	      if(!dead)
+	      {
+		 Die();
+		 dead = true;
+	      }
+	    }
+	  }
+   	}
 	#endregion
 
 	#region Coroutines
