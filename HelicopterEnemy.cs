@@ -201,7 +201,7 @@ public class HelicopterEnemy : MonoBehaviour
 				float distance = Vector3.Distance(hit.point, transform.position);
 
 				// If the helicopter is close to the ground, trigger the explosion and destroy the game object
-				if (distance < 0.3f)
+				if (distance < 0.5f)
 				{
 					if (!dead)
 					{
