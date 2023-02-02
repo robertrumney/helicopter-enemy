@@ -3,8 +3,8 @@ using System.Collections;
 
 public class FireHelicopterGun : MonoBehaviour 
 {
-    #region Variables
-    public AudioClip[] shots;
+    	#region Variables
+    	public AudioClip[] shots;
 	public Transform[] guns;
 
 	[HideInInspector]
@@ -34,10 +34,10 @@ public class FireHelicopterGun : MonoBehaviour
 	public BoxCollider newCollider;
 
 	private RaycastHit hit;
-    #endregion
+    	#endregion
 
-    #region Private Methods
-    private void Start()
+    	#region Private Methods
+   	private void Start()
 	{
 		target = Game.instance.playerScript.weaponCameraObj.transform;
 
@@ -45,9 +45,9 @@ public class FireHelicopterGun : MonoBehaviour
 		StartCoroutine (UpdateAI ());
 	}
 
-	private void Fire(Vector3 poz, Transform origin)
+	private void Fire(Vector3 position, Transform origin)
 	{
-		origin.LookAt(poz);
+		origin.LookAt(position);
 
 		GameObject GO = (GameObject)Instantiate(tracer, origin.position, origin.rotation);
 		Rigidbody instantiatedProjectile = GO.GetComponent<Rigidbody>();
