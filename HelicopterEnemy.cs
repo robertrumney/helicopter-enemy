@@ -80,9 +80,9 @@ public class HelicopterEnemy : MonoBehaviour
 
 	    // Check the player's health and apply damage
 	    if (Game.instance.playerScript.hitPoints > 30)
-		Game.instance.playerScript.PlayaDamage(1);
+		Game.instance.playerScript.PlayerDamage(1);
 	    else
-		Game.instance.playerScript.PlayaDamage(5);
+		Game.instance.playerScript.PlayerDamage(5);
 
 	    // Set the velocity of the instantiatedProjectile
 	    instantiatedProjectile.velocity = origin.TransformDirection(new Vector3(0, 0, 500));
