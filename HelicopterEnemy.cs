@@ -136,17 +136,17 @@ public class HelicopterEnemy : MonoBehaviour
 	// If the helicopter hits the ground while falling before distance threshold : explode
 	private void OnCollisionEnter(Collision collision)
 	{
-	  if(falling)
-	  {
-	    if(collision.gameObject.CompareTag("Terrain"))
+	    if(falling)
 	    {
-	      if(!dead)
-	      {
-		 Die();
-		 dead = true;
-	      }
+	        if(collision.gameObject.CompareTag("Terrain"))
+	        {
+	            if(!dead)
+	            {
+		       Die();
+		       dead = true;
+	            }
+	        }
 	    }
-	  }
    	}
 	#endregion
 
